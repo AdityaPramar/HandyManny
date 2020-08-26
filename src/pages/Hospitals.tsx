@@ -29,7 +29,7 @@ const Hospitals: React.FC = () => {
 	const history = useHistory()
 	const username = useSelector((state: any) => state.user.username)
 	function dashrouting() {
-		if (username === 'minet') {
+		if (username === 'byte') {
 			history.replace('/admindash')
 		} else {
 			history.replace('/dashboard')
@@ -46,7 +46,7 @@ const Hospitals: React.FC = () => {
 	const [res, setRes] = useState('')
 
 	async function loginUser() {
-		axios.post('http://localhost:5000/safar/money', {
+		axios.post('https://safarapi.arhaanb.co/safar/money', {
 			username: username,
 			money: money
 		}).then((res: any) => {
@@ -115,11 +115,9 @@ const Hospitals: React.FC = () => {
 								<IonIcon icon={cardOutline}></IonIcon>
 							</IonFabButton>
 						</Link>
-						<Link to="/dashboard">
-							<IonFabButton>
+							<IonFabButton onClick={dashrouting}>
 								<IonIcon icon={personOutline}></IonIcon>
 							</IonFabButton>
-						</Link>
 					</IonFabList>
 				</IonFab>
 			</IonContent>

@@ -17,7 +17,7 @@ const Vaccines: React.FC = () => {
 	const history = useHistory()
 	const username = useSelector((state: any) => state.user.username)
 	function dashrouting() {
-		if (username === 'minet') {
+		if (username === 'byte') {
 			history.replace('/admindash')
 		} else {
 			history.replace('/dashboard')
@@ -142,7 +142,7 @@ const Vaccines: React.FC = () => {
 
 
 				<IonFab slot='fixed' vertical='bottom' horizontal='end'>
-					<IonFabButton>
+				<IonFabButton>
 						<IonIcon icon={analyticsOutline} />
 					</IonFabButton>
 					<IonFabList side='top'>
@@ -156,11 +156,9 @@ const Vaccines: React.FC = () => {
 								<IonIcon icon={cardOutline}></IonIcon>
 							</IonFabButton>
 						</Link>
-						<Link to="/dashboard">
-							<IonFabButton>
+							<IonFabButton onClick={dashrouting}>
 								<IonIcon icon={personOutline}></IonIcon>
 							</IonFabButton>
-						</Link>
 					</IonFabList>
 				</IonFab>
 			</IonContent>

@@ -27,7 +27,7 @@ const Hospitals: React.FC = () => {
 	const history = useHistory()
 	const username = useSelector((state: any) => state.user.username)
 	function dashrouting() {
-		if (username === 'minet') {
+		if (username === 'byte') {
 			history.replace('/admindash')
 		} else {
 			history.replace('/dashboard')

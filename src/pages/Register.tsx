@@ -20,7 +20,7 @@ const Register: React.FC = () => {
 
 		if (password === Cpassword && res) {
 			Toast('Registration Complete')
-			axios.post('http://localhost:5000/safar/users', {
+			axios.post('https://safarapi.arhaanb.co/safar/users', {
 				username: username,
 				name: name
 			}).then((res: any) => {

@@ -42,10 +42,18 @@ const Dashboard: React.FC = () => {
 
 	//HAAN
 	useEffect(() => {
-		if (username === 'minet') {
+		if (username === 'byte') {
 			history.replace('/admindash')
 		}
 	}, [history, username])
+
+	function dashrouting() {
+		if (username === 'byte') {
+			history.replace('/admindash')
+		} else {
+			history.replace('/dashboard')
+		}
+	}
 
 	// useEffect(() => {
 	// 	axios.post('https://api.arhaanb.co/cura/user', {
@@ -68,7 +76,7 @@ const Dashboard: React.FC = () => {
 	}, [])
 
 	useEffect(() => {
-		axios.post('http://localhost:5000/safar/user', {
+		axios.post('https://safarapi.arhaanb.co/safar/user', {
 			username: username
 		}).then((res: any) => {
 			setMoney(res.data.money)
@@ -79,7 +87,7 @@ const Dashboard: React.FC = () => {
 	});
 
 	useEffect(() => {
-		axios.get('http://localhost:5000/safar/tickets', {
+		axios.get('https://safarapi.arhaanb.co/safar/tickets', {
 			username: username
 		}).then((res: any) => {
 			setTickdata(res.data)
@@ -230,9 +238,9 @@ const Dashboard: React.FC = () => {
 						<IonFabButton routerLink='/hospitals'>
 							<IonIcon icon={cardOutline}></IonIcon>
 						</IonFabButton>
-						<IonFabButton routerLink='/dashboard'>
-							<IonIcon icon={personOutline}></IonIcon>
-						</IonFabButton>
+					<IonFabButton onClick={dashrouting}>
+						<IonIcon icon={personOutline}></IonIcon>
+					</IonFabButton>
 					</IonFabList>
 				</IonFab>
 			</IonContent>

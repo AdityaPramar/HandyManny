@@ -22,7 +22,7 @@ const Login: React.FC = () => {
 			Toast('Logged In')
 			try {
 				dispatch(setUserState(res.user.email))
-				if (Username === 'minet') {
+				if (Username === 'byte') {
 					history.replace('/admindash')
 				} else {
 					history.replace('/dashboard')
