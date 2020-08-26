@@ -117,7 +117,7 @@ const Dashboard: React.FC = () => {
 					<IonCol>
 
 						<p className="center">
-							<img src="https://i.postimg.cc/Qx6MQDLg/Component-2-1.png" alt="" style={{ width: '80%' }} />
+						
 						</p>
 
 						<div className="header dash">

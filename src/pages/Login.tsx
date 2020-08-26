@@ -40,13 +40,13 @@ const Login: React.FC = () => {
 			<IonContent className="Formstyle">
 				<IonGrid className="contain">
 					<p className="center">
-						<img src="https://i.postimg.cc/L8vFzbkf/safar-logo.png" alt="Cura" className="cura" />
 					</p>
 					<div>
+						<p className='centerlog'>SAFAR</p>
 						<IonInput className="form" placeholder="Username" onIonChange={(e: any) => setUsername(e.target.value)} />
 						<IonInput type='password' className="form" placeholder="Password" onIonChange={(e: any) => setPassword(e.target.value)} />
 						<button className='buttonLogin' onClick={loginUser}>Login</button>
-						<p className='help center'>You are logging in with AarogyaSetu</p>
+						<p className='help center'>You are logging in with HandyManny</p>
 						<p className='help center'>Don't Have an Account? <Link to='/register'>Register</Link></p>
 					</div>
 				</IonGrid>
